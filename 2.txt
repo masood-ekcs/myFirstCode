@@ -1,2 +1,2 @@
 I'm learning a new language.
-The language is called node
+The language is called node.
