@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="generatePass2()" id>Generate Password</button>
+    <div id="print"></div>
+
+    <script>
+
+        function generatePass2() {
+            var pass = []
+            pass.push(String.fromCharCode(Math.floor(Math.random() * (122 - 97 + 1)) + 97))
+            pass.push(String.fromCharCode(Math.floor(Math.random() * (122 - 97 + 1)) + 97))
+            pass.push(String.fromCharCode(Math.floor(Math.random() * (122 - 97 + 1)) + 97))
+            pass.push(String.fromCharCode(Math.floor(Math.random() * (122 - 97 + 1)) + 97))
+            pass.push(String.fromCharCode(Math.floor(Math.random() * (122 - 97 + 1)) + 97))
+            console.log(pass)
+            // var myPassword = pass[0] + pass[1] + pass[2] + pass[3] + pass[4]
+            var myPassword = pass.join("") //use JOIN to concatenate strings
+            // document.write(myPassword)
+            // alert("Your Password is " + myPassword)
+            document.getElementById("print").innerHTML = "Your Password is : " + myPassword
+
+        }
+
+    </script>
+</body>
+
+</html>
